@@ -10,7 +10,7 @@ You may need to test the string against multiple regex patterns to validate its 
 import re
 
 def password_detection(pw):
-    if re.match(r'[a-zA-Z0-9]{8,}', pw):
+    if re.search(r'[0-9]', pw) and re.search(r'[A-Z]', pw) and re.search(r'[a-z]', pw):
         return True
     else:
         return False
